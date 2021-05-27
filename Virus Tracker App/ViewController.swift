@@ -11,6 +11,11 @@ import MapKit
 class ViewController: UIViewController {
     
 
+    @IBAction func emailButton(_ sender: Any) {
+        
+        UIApplication.shared.open(URL(string: "mailto:example@email.com")! as URL, options: [:], completionHandler: nil)
+    }
+    
     private let locationManager = CLLocationManager()
     private var currentCoordinate: CLLocationCoordinate2D?
 
