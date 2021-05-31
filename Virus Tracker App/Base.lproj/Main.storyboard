@@ -642,11 +642,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="IOJ-iX-Q2c"/>
         <segue reference="qgk-8P-G4Q"/>
         <segue reference="zne-KZ-J5q"/>
         <segue reference="ytE-1p-myr"/>
         <segue reference="ETL-a1-WQY"/>
-        <segue reference="Rhp-dx-mIy"/>
+        <segue reference="Pz1-xn-KmC"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="5929214 - avatar doctor health hospital man medical" width="512" height="512"/>

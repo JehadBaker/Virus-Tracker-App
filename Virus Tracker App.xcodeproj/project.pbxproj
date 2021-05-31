@@ -16,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A522A28D26607BDC00B303A8 /* Virus Tracker App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Virus Tracker App.entitlements"; sourceTree = "<group>"; };
 		A5281DC72645D34B00A89B9C /* Virus Tracker App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Virus Tracker App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5281DCA2645D34B00A89B9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5281DCC2645D34B00A89B9C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +57,7 @@
 		A5281DC92645D34B00A89B9C /* Virus Tracker App */ = {
 			isa = PBXGroup;
 			children = (
+				A522A28D26607BDC00B303A8 /* Virus Tracker App.entitlements */,
 				A5281DCA2645D34B00A89B9C /* AppDelegate.swift */,
 				A5281DCC2645D34B00A89B9C /* SceneDelegate.swift */,
 				A5281DCE2645D34B00A89B9C /* ViewController.swift */,
@@ -286,6 +288,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Virus Tracker App/Virus Tracker App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Virus Tracker App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -304,6 +307,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Virus Tracker App/Virus Tracker App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Virus Tracker App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (

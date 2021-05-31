@@ -8,6 +8,8 @@
 import UIKit
 import MapKit
 
+
+
 class ViewController: UIViewController {
     
 
@@ -59,44 +61,54 @@ class ViewController: UIViewController {
     private func addAnnotations() {
         
         let appleParkAnnotation = MKPointAnnotation()
-        appleParkAnnotation.title = "COVID-19 Case"
-        appleParkAnnotation.subtitle = "COVID-19 Case reported in this area."
+        appleParkAnnotation.title = "Low COVID-19 Cases"
+        appleParkAnnotation.subtitle = "7 COVID-19 Cases reported in this area."
         appleParkAnnotation.coordinate = CLLocationCoordinate2D(latitude: 37.332072300 , longitude:-122.011138100)
         
         let ortegaParkAnnotation = MKPointAnnotation()
-        ortegaParkAnnotation.title = "COVID-19 Case"
-        ortegaParkAnnotation.subtitle = "COVID-19 Case reported in this area."
+        ortegaParkAnnotation.title = "Several COVID-19 Cases"
+        ortegaParkAnnotation.subtitle = " 18 COVID-19 Cases reported in this area."
         ortegaParkAnnotation.coordinate = CLLocationCoordinate2D(latitude:    37.342226 , longitude: -122.025617)
         
         let anzaCollegeAnnotation = MKPointAnnotation()
-        anzaCollegeAnnotation.title = "COVID-19 Case"
-        anzaCollegeAnnotation.subtitle = "COVID-19 Case reported in this area."
+        anzaCollegeAnnotation.title = "High COVID-19 Cases"
+        anzaCollegeAnnotation.subtitle = "55 COVID-19 Cases reported in this area."
         anzaCollegeAnnotation.coordinate = CLLocationCoordinate2D(latitude: 37.3193, longitude: -122.0448)
         
         let sanJoseAnnotation = MKPointAnnotation()
-        sanJoseAnnotation.title = "COVID-19 Case"
-        sanJoseAnnotation.subtitle = "COVID-19 Case reported in this area."
+        sanJoseAnnotation.title = "High COVID-19 Cases"
+        sanJoseAnnotation.subtitle = "106 COVID-19 Cases reported in this area."
         sanJoseAnnotation.coordinate = CLLocationCoordinate2D(latitude: 37.3639, longitude: -121.9289)
         
         let sanAntonioAnnotation = MKPointAnnotation()
-        sanAntonioAnnotation.title = "COVID-19 Case"
-        sanAntonioAnnotation.subtitle = "COVID-19 Case reported in this area."
+        sanAntonioAnnotation.title = "Several COVID-19 Cases"
+        sanAntonioAnnotation.subtitle = "23 COVID-19 Cases reported in this area."
         sanAntonioAnnotation.coordinate = CLLocationCoordinate2D(latitude: 37.3332, longitude: -122.1090)
         
         let santaClaraAnnotation = MKPointAnnotation()
-        santaClaraAnnotation.title = "COVID-19 Case"
-        santaClaraAnnotation.subtitle = "COVID-19 Case reported in this area."
+        santaClaraAnnotation.title = "Low COVID-19 Cases"
+        santaClaraAnnotation.subtitle = "9 COVID-19 Cases reported in this area."
         santaClaraAnnotation.coordinate = CLLocationCoordinate2D(latitude: 37.3496, longitude: -121.9390)
         
         let stevensCreekAnnnotation = MKPointAnnotation()
-        stevensCreekAnnnotation.title = "COVID-19 Case"
-        stevensCreekAnnnotation.subtitle = "COVID-19 Case reported in this area."
+        stevensCreekAnnnotation.title = "Several COVID-19 Cases"
+        stevensCreekAnnnotation.subtitle = "32 COVID-19 Cases reported in this area."
         stevensCreekAnnnotation.coordinate = CLLocationCoordinate2D(latitude: 37.3043, longitude: -122.0730)
         
         let serraParkAnnotation = MKPointAnnotation()
-        serraParkAnnotation.title = "COVID-19 Case"
-        serraParkAnnotation.subtitle = "COVID-19 Case reported in this area."
-        serraParkAnnotation.coordinate = CLLocationCoordinate2D(latitude: 37.3428, longitude: 122.0423)
+        serraParkAnnotation.title = "High COVID-19 Cases"
+        serraParkAnnotation.subtitle = "62 COVID-19 Cases reported in this area."
+        serraParkAnnotation.coordinate = CLLocationCoordinate2D(latitude: 37.3428, longitude: -122.0423)
+        
+        let medicalCenterAnnotation = MKPointAnnotation()
+        medicalCenterAnnotation.title = "High COVID-19 Cases"
+        medicalCenterAnnotation.subtitle = "48 COVID-19 Cases reported in this area."
+        medicalCenterAnnotation.coordinate = CLLocationCoordinate2D(latitude: 37.3357083, longitude: -121.9990281)
+        
+        let sunkenGardensAnnotation = MKPointAnnotation()
+        sunkenGardensAnnotation.title = "Low COVID-19 Cases"
+        sunkenGardensAnnotation.subtitle = "3 COVID-19 Cases reported in this area."
+        sunkenGardensAnnotation.coordinate = CLLocationCoordinate2D(latitude: 37.354896745458, longitude: -122.0105419264)
         
         
         mapView.addAnnotation(appleParkAnnotation)
@@ -107,6 +119,8 @@ class ViewController: UIViewController {
         mapView.addAnnotation(santaClaraAnnotation)
         mapView.addAnnotation(stevensCreekAnnnotation)
         mapView.addAnnotation(serraParkAnnotation)
+        mapView.addAnnotation(medicalCenterAnnotation)
+        mapView.addAnnotation(sunkenGardensAnnotation)
     }
 }
 
@@ -143,8 +157,12 @@ extension ViewController: MKMapViewDelegate {
             annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "AnnotationView")
         }
         
-        if let title = annotation.title, title == "COVID-19 Case" {
+        if let title = annotation.title, title == "Low COVID-19 Cases" {
             annotationView?.image = UIImage(named: "bacteria")
+        }else if let title = annotation.title, title == "Several COVID-19 Cases"{
+            annotationView?.image = UIImage(named: "bacteria-yellow")
+        }else if let title = annotation.title, title == "High COVID-19 Cases"{
+            annotationView?.image = UIImage(named: "bacteria-red1")
         }else if annotation === mapView.userLocation {
     annotationView?.image = UIImage(named: "usericon2")
 }
@@ -157,6 +175,8 @@ extension ViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         print("The annotation was selected: \(String(describing: view.annotation?.title))")
     }
+    
+    
 }
 
 /*import CoreLocation
